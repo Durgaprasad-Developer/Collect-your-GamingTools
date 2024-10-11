@@ -1,146 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collect your GamingTools</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Lùn Dev</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
-
 <body>
     <div class="container">
-        <header class="navbar">
-            <a href="/"><img src="images/logo.png" class="logo" alt="Logo"></a>
-            <a href="/" class="website-name">Collect your GamingTools</a>
-            <nav>
-                <ul id="menuList">
-                    <li><a href="#">Game Controllers</a></li>
-                    <li><a href="#">VR Accessories</a></li>
-                    <li><a href="#">Media Remotes</a></li>
-                    <li><a href="#">Others</a></li>
-                    <li class="login"><a href="login/login.html">Login</a></li>
-                </ul>
-            </nav>
-            <div class="search-bar hidden" id="searchBar">
-                <input type="text" id="search-input" placeholder="Search..." aria-label="Search products" />
-                <button type="button" onclick="performSearch()">🔍</button>
+        <nav class="menu">
+            <div class="logo">
+                Lùn<span>Dev</span>
             </div>
-            <img src="images/menu.png" class="menu-icon" alt="Menu" onclick="toggleMenu()">
-        </header>
-
-        <section class="hero">
-            <div class="overlay"></div>
-            <div class="hero-content">
-                <h1>Welcome to GamingTools</h1>
-                <p>Your one-stop shop for all gaming accessories.</p>
-                <a href="#" class="cta-btn">Explore Products</a>
-            </div>
-        </section>
-
-        <!-- Products Section -->
-        <div class="products">
-            <!-- Product Card Template -->
-            <div class="product-card">
-                <div class="product-info">
-                    <h2>PS4 V2 Dualshock 4</h2>
-                    <h3>Wireless Controllers for PlayStation 4</h3>
-                    <p>(Compatible/Generic)</p>
-                    <div class="price">
-                        <span class="original-price">&#8377;5500</span>
-                        <span class="discounted-price">&#8377;3999</span>
-                        <span class="discount">30% off</span>
-                    </div>
-                    <div class="rating">
-                        <span>★★★★☆</span>
-                        <p>(2252 reviews)</p>
-                    </div>
-                    <div class="overall-rating">
-                        <span>Overall Rating:</span>
-                        <p class="star">4.1★</p>
-                    </div>
-                    <div class="btn-section">
-                        <button type="button" class="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                        <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
-                    </div>
-                </div>
-                <div class="product-image">
-                    <img src="images/controller1.png" class="controller" alt="PS4 Controller">
+            <ul>
+                <li class="active"><i class="fa-solid fa-house-user"></i> Home</li>
+                <li><i class="fa-regular fa-user"></i> User</li>
+                <li><i class="fa-solid fa-heart"></i> Favourite</li>
+            </ul>
+            <ul>
+                <li><i class="fa-brands fa-tiktok"></i> Tiktok</li>
+                <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+                <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+            </ul>
+        </nav>
+        
+        <div class="center">
+            <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
                 </div>
             </div>
 
-            <!-- Additional Product Cards -->
-            <div class="product-card">
-                <div class="product-info">
-                    <h2>Xbox Wireless Controller</h2>
-                    <h3>Controllers for Xbox One and Series X</h3>
-                    <p>(Official)</p>
-                    <div class="price">
-                        <span class="original-price">&#8377;4500</span>
-                        <span class="discounted-price">&#8377;3499</span>
-                        <span class="discount">22% off</span>
-                    </div>
-                    <div class="rating">
-                        <span>★★★★★</span>
-                        <p>(1189 reviews)</p>
-                    </div>
-                    <div class="overall-rating">
-                        <span>Overall Rating:</span>
-                        <p class="star">4.8★</p>
-                    </div>
-                    <div class="btn-section">
-                        <button type="button" class="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                        <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+            <h2>PRODUCTS</h2>
+            <div class="product-list">
+                <!-- Product Item Template -->
+                <div class="item" data-key="1">
+                    <div class="img"><img src="img1.png" alt="Product 1"></div>
+                    <div class="content">
+                        <div class="title">Product name 1</div>
+                        <div class="des">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">$20.03</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="removeItem(1)"><i class="fa-solid fa-trash-can"></i></button>
                     </div>
                 </div>
-                <div class="product-image">
-                    <img src="images/newcontroller3.png" class="controller" alt="Xbox Controller">
+                <div class="item" data-key="2">
+                    <div class="img"><img src="img2.png" alt="Product 2"></div>
+                    <div class="content">
+                        <div class="title">Product name 2</div>
+                        <div class="des">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">$20.03</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="removeItem(2)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                <div class="item" data-key="3">
+                    <div class="img"><img src="img3.png" alt="Product 3"></div>
+                    <div class="content">
+                        <div class="title">Product name 3</div>
+                        <div class="des">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">$20.03</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="removeItem(3)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                <div class="item" data-key="4">
+                    <div class="img"><img src="img4.png" alt="Product 4"></div>
+                    <div class="content">
+                        <div class="title">Product name 4</div>
+                        <div class="des">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">$20.03</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="removeItem(4)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
                 </div>
             </div>
-
-            <!-- Repeat similar structure for other products -->
         </div>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-section about">
-                    <div class="logo-container">
-                        <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo">
-                        <h2 class="logo-text">Collect your GamingTools</h2>
-                    </div>
-                    <p>Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated selection of controllers, VR gear, and more.</p>
-                    <div class="contact">
-                        <span><i class="fas fa-phone"></i> 123-456-789</span>
-                        <span><i class="fas fa-envelope"></i> info@gamingtools.com</span>
-                    </div>
-                    <div class="socials">
-                        <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section links">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section contact">
-                    <h2>Contact Us</h2>
-                    <p>For inquiries, please reach out via email or call us.</p>
-                </div>
-            </div>
-        </footer>
+        
+        <aside class="cart">
+            <div class="cart-name">CART</div>
+            <div class="cart-list"></div>
+        </aside>
     </div>
+    
     <script src="script.js"></script>
 </body>
-
 </html>
